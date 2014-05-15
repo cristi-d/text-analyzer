@@ -209,7 +209,7 @@ public final class TextAnalyzer {
             if (utterance.getEmmiter() != null) {
                 Annotation annot = new Annotation(utterance.getOriginalText());
                 pipeline.annotate(annot);
-               
+                utterance.setOriginalTextAnnotation(annot);
                 
                 for (int sentenceIndex = 0; sentenceIndex < annot.get(CoreAnnotations.SentencesAnnotation.class).size(); sentenceIndex++) {
                     CoreMap sentence = annot.get(CoreAnnotations.SentencesAnnotation.class).get(sentenceIndex);

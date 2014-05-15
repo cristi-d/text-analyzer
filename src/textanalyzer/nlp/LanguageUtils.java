@@ -8,10 +8,15 @@ import textanalyzer.model.lang.PolyphonicRelationship;
 import edu.smu.tspell.wordnet.Synset;
 import edu.smu.tspell.wordnet.SynsetType;
 import edu.smu.tspell.wordnet.WordNetDatabase;
+import edu.stanford.nlp.ling.CoreAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.IndexedWord;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.process.Morphology;
+import edu.stanford.nlp.semgraph.SemanticGraph;
+import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.CollapsedCCProcessedDependenciesAnnotation;
+import edu.stanford.nlp.semgraph.SemanticGraphEdge;
 import edu.stanford.nlp.trees.GrammaticalStructure;
 import edu.stanford.nlp.trees.GrammaticalStructureFactory;
 import edu.stanford.nlp.trees.PennTreebankLanguagePack;
@@ -44,6 +49,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import textanalyzer.model.lang.Word;
+import textanalyzer.model.lang.WordOccurance;
 
 /**
  *
@@ -189,6 +195,83 @@ public final class LanguageUtils {
     
     public static List<String> getUtteranceCueWords() {
         return utteranceCueWords;
+    }
+    
+    
+    public static PolyphonicRelationship getPolyphonicRelationshipBySemanticGraph(WordOccurance wOcc1, WordOccurance wOcc2) {
+        //TODO: token index is not the same as word index :( Find a way to map token index to word index
+        
+        
+        System.out.println("Comparing words " + wOcc1.getWord() + " & " + wOcc2.getWord() + " from sentences " + wOcc1.getSentenceIndex() + " & " + wOcc2.getSentenceIndex() );
+        if (wOcc1.getSentenceIndex() != wOcc2.getSentenceIndex()) {
+            if (wOcc1.getVoice().getName().equals(wOcc2.getVoice().getName())) {
+                return PolyphonicRelationship.UNITY;
+            } else {
+                return PolyphonicRelationship.INDEPENDENT;
+            }
+        } else {
+            CoreMap sentence = wOcc1.getUtterance().getOriginalTextAnnotation().get(CoreAnnotations.SentencesAnnotation.class).get(wOcc1.getSentenceIndex());
+            System.out.println("Sentence: " + sentence);
+            System.out.println(wOcc1.getWord().toString() + "(" + wOcc1.getTokenIndex()+ ") & " + wOcc2.getWord().toString() + "(" + wOcc2.getTokenIndex()+ ")");
+            SemanticGraph graph = sentence.get(CollapsedCCProcessedDependenciesAnnotation.class);
+            
+            IndexedWord word1 = graph.getNodeByIndex(wOcc1.getTokenIndex());
+            IndexedWord word2 = graph.getNodeByIndex(wOcc2.getTokenIndex());
+            
+            List<IndexedWord> word1ToRoot = graph.getPathToRoot(word1);
+            List<IndexedWord> word2ToRoot = graph.getPathToRoot(word2);
+            
+            List<IndexedWord> word1ToCommon = new ArrayList<IndexedWord>();
+            List<IndexedWord> word2ToCommon = new ArrayList<IndexedWord>();
+            
+            List<IndexedWord> smallerList = word1ToRoot, largerList = word2ToRoot, 
+                    smallerListToCommon = word1ToCommon, largerListToCommon = word2ToCommon;
+            
+            if (word1ToRoot.size() > word2ToRoot.size()) {
+                smallerList = word2ToRoot;
+                smallerListToCommon = word2ToCommon;
+                
+                largerList = word1ToRoot;
+                largerListToCommon = word1ToCommon;
+            } 
+            
+            for (int i = 0; i < smallerList.size(); i++) {
+                    IndexedWord w1 = smallerList.get(i);
+                    smallerListToCommon.add(w1);
+                    int w2Index = -1;
+                    if ((w2Index = largerList.indexOf(w1)) != -1) {
+                        largerListToCommon.addAll(largerList.subList(0, w2Index + 1));
+                        break;
+                    }
+                }
+            
+            System.out.println("Word 1 to common: ");
+            IndexedWord previous = word1;
+            for (IndexedWord word : word1ToCommon) {
+                SemanticGraphEdge edge = graph.getEdge(previous, word);
+                System.out.println(previous + " --[" + edge.getRelation().toString() + "]--> " + word);
+            }
+            
+            System.out.println("Word 2 to common: ");
+            previous = word2;
+            for (IndexedWord word : word2ToCommon) {
+                SemanticGraphEdge edge = graph.getEdge(previous, word);
+                System.out.println(previous + " --[" + edge.getRelation().toString() + "]--> " + word);
+            }
+            
+        }
+        return null;
+    }
+    
+    public static SemanticGraph getSentenceSemanticGraph(CoreMap sentence) {
+        SemanticGraph dependencies = sentence.get(CollapsedCCProcessedDependenciesAnnotation.class);
+        
+        return dependencies;
+    }
+    public static Tree getSentenceTree(CoreMap sentence) {
+        Tree tree = depParser.apply(sentence.get(CoreAnnotations.TokensAnnotation.class));
+
+        return tree;
     }
     
     public static GrammaticalStructure getGrammaticalStructure(CoreMap sentence) {

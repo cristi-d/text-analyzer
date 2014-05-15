@@ -11,5 +11,5 @@ package textanalyzer.model.lang;
  * @author cristiand
  */
 public enum PolyphonicRelationship {
-    UNITY, DIFFERENCE;
+    UNITY, DIFFERENCE, INDEPENDENT;
 }
