@@ -1,0 +1,32 @@
+[Utterance #30]: Berlioz's high tenor rang out in the deserted walk, and as Mikhail Alexandrovich went deeper into the maze, which only a highly educated man can go into without risking a broken neck, the poet learned more and more interesting and useful things about the Egyptian Osiris, a benevolent god and the son of Heaven and Earth, and about the Phoenician god Tammoz, and about Marduk, and even about a lesser known, terrible god, Vitzliputzli, once greatly venerated by the Aztecs in Mexico. And just at the moment when Mikhail Alexandrovich was telling the poet how the Aztecs used to fashion figurines of Vitzli-putzli out of dough - the first man appeared in the walk.
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] and (54) [...] [Voice "God"] god (66)
+[Detected Polyphonic Relationship]: God UNITY God
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] the (55) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] son (56) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] of (57) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] Heaven (58) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] and (59) [...] [Voice "God"] god (66)
+[Detected Polyphonic Relationship]: God UNITY God
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] Earth (60) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] , (61) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] and (62) [...] [Voice "God"] god (66)
+[Detected Polyphonic Relationship]: God UNITY God
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] about (63) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] the (64) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (53) [...] [Token] Phoenician (65) [...] [Voice "God"] god (66)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] Tammoz (67) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] , (68) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] and (69) [...] [Voice "God"] god (81)
+[Detected Polyphonic Relationship]: God UNITY God
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] about (70) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] Marduk (71) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] , (72) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] and (73) [...] [Voice "God"] god (81)
+[Detected Polyphonic Relationship]: God UNITY God
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] even (74) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] about (75) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] a (76) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] lesser (77) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] known (78) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] , (79) [...] [Voice "God"] god (81)
+[Co-occurence] in [Utterance #30]: [Voice "God"] god (66) [...] [Token] terrible (80) [...] [Voice "God"] god (81)

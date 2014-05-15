@@ -1,0 +1,133 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 4092 bytes for char in c:\build_area\jdk6_25\hotspot\src\share\vm\utilities/stack.inline.hpp
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:44), pid=2068, tid=2576
+#
+# JRE version: 6.0_25-b06
+# Java VM: Java HotSpot(TM) Client VM (20.0-b11 mixed mode windows-x86 )
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x66951c00):  VMThread [stack: 0x669e0000,0x66a30000] [id=2576]
+
+Stack: [0x669e0000,0x66a30000],  sp=0x66a2f848,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x13363a]
+V  [jvm.dll+0x12e62c]
+V  [jvm.dll+0x138139]
+V  [jvm.dll+0x13818d]
+V  [jvm.dll+0x5aa9e]
+V  [jvm.dll+0x5ab73]
+V  [jvm.dll+0x7ad31]
+V  [jvm.dll+0x67c28]
+V  [jvm.dll+0x615c1]
+V  [jvm.dll+0x5ef25]
+V  [jvm.dll+0x59ca7]
+V  [jvm.dll+0x5ff28]
+V  [jvm.dll+0x57acb]
+V  [jvm.dll+0x13afb7]
+V  [jvm.dll+0x11d903]
+V  [jvm.dll+0x11cbce]
+V  [jvm.dll+0x11cef0]
+V  [jvm.dll+0x11d2f2]
+V  [jvm.dll+0x140a8c]
+C  [msvcr71.dll+0x9565]
+C  [kernel32.dll+0xb729]
+
+VM_Operation (0x0090e9a0): GenCollectForAllocation, mode: safepoint, requested by thread 0x002b7000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x66979c00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=2160, stack(0x66bc0000,0x66c10000)]
+  0x6696b000 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=3720, stack(0x66b70000,0x66bc0000)]
+  0x66969800 JavaThread "Attach Listener" daemon [_thread_blocked, id=3552, stack(0x66b20000,0x66b70000)]
+  0x66968000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1920, stack(0x66ad0000,0x66b20000)]
+  0x6695a400 JavaThread "Finalizer" daemon [_thread_blocked, id=2548, stack(0x66a80000,0x66ad0000)]
+  0x66955800 JavaThread "Reference Handler" daemon [_thread_blocked, id=2092, stack(0x66a30000,0x66a80000)]
+  0x002b7000 JavaThread "main" [_thread_blocked, id=3456, stack(0x008c0000,0x00910000)]
+
+Other Threads:
+=>0x66951c00 VMThread [stack: 0x669e0000,0x66a30000] [id=2576]
+  0x66995000 WatcherThread [stack: 0x66c10000,0x66c60000] [id=3596]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x002b5f98] Threads_lock - owner thread: 0x66951c00
+[0x002b63b0] Heap_lock - owner thread: 0x002b7000
+
+Heap
+ def new generation   total 199808K, used 199808K [0x02990000, 0x10250000, 0x21d90000)
+  eden space 177664K, 100% used [0x02990000, 0x0d710000, 0x0d710000)
+  from space 22144K, 100% used [0x0d710000, 0x0ecb0000, 0x0ecb0000)
+  to   space 22144K, 100% used [0x0ecb0000, 0x10250000, 0x10250000)
+ tenured generation   total 503772K, used 503771K [0x21d90000, 0x40987000, 0x60590000)
+   the space 503772K,  99% used [0x21d90000, 0x40986ff8, 0x40987000, 0x40987000)
+ compacting perm gen  total 12288K, used 11012K [0x60590000, 0x61190000, 0x64590000)
+   the space 12288K,  89% used [0x60590000, 0x61051288, 0x61051400, 0x61190000)
+No shared spaces configured.
+
+Code Cache  [0x00910000, 0x00a78000, 0x02910000)
+ total_blobs=773 nmethods=619 adapters=89 free_code_cache=32086528 largest_free_block=0
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files\Java\jdk1.6.0_25\bin\java.exe
+0x7c900000 - 0x7c9b2000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c8f6000 	C:\WINDOWS\system32\kernel32.dll
+0x77dd0000 - 0x77e6b000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77e70000 - 0x77f03000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77fe0000 - 0x77ff1000 	C:\WINDOWS\system32\Secur32.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\msvcr71.dll
+0x6d8a0000 - 0x6db4f000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\client\jvm.dll
+0x7e410000 - 0x7e4a1000 	C:\WINDOWS\system32\USER32.dll
+0x77f10000 - 0x77f59000 	C:\WINDOWS\system32\GDI32.dll
+0x76b40000 - 0x76b6d000 	C:\WINDOWS\system32\WINMM.dll
+0x6d850000 - 0x6d85c000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\verify.dll
+0x6d3d0000 - 0x6d3ef000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\java.dll
+0x76bf0000 - 0x76bfb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d890000 - 0x6d89f000 	C:\Program Files\Java\jdk1.6.0_25\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xmx1500m 
+java_command: textanalyzer.Playground
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.6.0_24
+CLASSPATH=.;C:\Program Files\Java\jre7\lib\ext\QTJava.zip
+PATH=C:\Program Files\Windows Resource Kits\Tools\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\TortoiseSVN\bin;"C:\Program Files\Java\jdk1.6.0_25\bin";D:\batchFiles\;C:\Program Files\Graphviz 2.28\bin;D:\apache-ant\apache-ant-1.8.2\bin;D:\glassfish-3.1.2.2\bin;D:\glassfish-3.1.2.2\glassfish\bin;D:\MySQL\MySQL Server 5.5\bin;D:\OpenCv\opencv\build\x86\mingw\bin;D:\CodeBlocks\MinGW\lib\gcc\mingw32\4.4.1\;D:\OpenCv\opencv\build\x86\vc9\bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319;"C:\Program Files\Java\jdk1.7.0_17\bin";C:\Program Files\Common Files\Intel\IPP-5.1;C:\Program Files\QuickTime\QTSystem\
+USERNAME=Cristi
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 22 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 1 (1 cores per cpu, 1 threads per core) family 6 model 22 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 2087280k(6568k free), swap 1933728k(5040k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.0-b11) for windows-x86 JRE (1.6.0_25-b06), built on Apr 14 2011 01:04:32 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Fri Oct 11 14:59:30 2013
+elapsed time: 73 seconds
+

@@ -1,0 +1,154 @@
+<markers>
+<!-- 
+* type = [UNITY | DIFFERENCE]
+* -->
+	<marker>
+		<stem> and </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	<marker>
+		<stem> also </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> additionally </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> beside </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> further </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> furthermore </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> next </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> too </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> moreover </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> similarly </stem>
+		<desc> Addition </desc>
+		<type> UNITY </type>
+	</marker>
+	<!--
+	<marker>
+		<stem> then </stem>
+		<desc> Cause - effect </desc>
+		<type> ELABORATION </type>
+	</marker>
+
+	<marker>
+		<stem> therefore </stem>
+		<desc> Cause - effect </desc>
+		<type> ELABORATION </type>
+	</marker>
+	
+	<marker>
+		<stem> thus </stem>
+		<desc> Cause - effect </desc>
+		<type> ELABORATION </type>
+	</marker>
+	
+	<marker>
+		<stem> accordingly </stem>
+		<desc> Cause - effect </desc>
+		<type> ELABORATION </type>
+	</marker>
+	
+	<marker>
+		<stem> consequently </stem>
+		<desc> Cause - effect </desc>
+		<type> ELABORATION </type>
+	</marker>
+	
+	<marker>
+		<stem> hence </stem>
+		<desc> Cause - effect </desc>
+		<type> ELABORATION </type>
+	</marker>
+	-->
+	<marker>
+		<stem> like </stem>
+		<desc> Comparison </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> likewise </stem>
+		<desc> Comparison </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> both </stem>
+		<desc> Comparison </desc>
+		<type> UNITY </type>
+	</marker>
+	
+	<marker>
+		<stem> however </stem>
+		<desc> Contrast </desc>
+		<type> DIFFERENCE </type>
+	</marker>
+	
+	<marker>
+		<stem> instead </stem>
+		<desc> Contrast </desc>
+		<type> DIFFERENCE </type>
+	</marker>
+	
+	<marker>
+		<stem> nevertheless </stem>
+		<desc> Contrast </desc>
+		<type> DIFFERENCE </type>
+	</marker>
+	
+	<marker>
+		<stem> conversely </stem>
+		<desc> Contrast </desc>
+		<type> DIFFERENCE </type>
+	</marker>
+	
+	<marker>
+		<stem> otherwise </stem>
+		<desc> Contrast </desc>
+		<type> DIFFERENCE </type>
+	</marker>
+	
+	<marker>
+		<stem> wherea </stem>
+		<desc> Contrast </desc>
+		<type> DIFFERENCE </type>
+	</marker>
+
+</markers>
