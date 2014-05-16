@@ -215,11 +215,38 @@ public final class LanguageUtils {
             System.out.println(wOcc1.getWord().toString() + "(" + wOcc1.getTokenIndex()+ ") & " + wOcc2.getWord().toString() + "(" + wOcc2.getTokenIndex()+ ")");
             SemanticGraph graph = sentence.get(CollapsedCCProcessedDependenciesAnnotation.class);
             
-            IndexedWord word1 = graph.getNodeByIndex(wOcc1.getTokenIndex());
-            IndexedWord word2 = graph.getNodeByIndex(wOcc2.getTokenIndex());
+            int wOcc1EndOffset = sentence.get(CoreAnnotations.TokensAnnotation.class).get(wOcc1.getTokenIndex()).endPosition();
+            int wOcc2EndOffset = sentence.get(CoreAnnotations.TokensAnnotation.class).get(wOcc2.getTokenIndex()).endPosition();
+            
+            int index1 = sentence.toString().substring(0, wOcc1EndOffset).split("[ ,.!?\"']").length;
+            int index2 = sentence.toString().substring(0, wOcc2EndOffset).split("[ ,.!?\"']").length;
+            
+            System.out.println("Sentence (reconstructed): " + graph.toRecoveredSentenceStringWithIndexMarking());
+            
+            IndexedWord word1 = null;
+            IndexedWord word2 = null; 
+            
+            for (IndexedWord w : graph.getAllNodesByWordPattern(wOcc1.getWord().getLemma())) {
+                if (w.endPosition() == wOcc1EndOffset) {
+                    word1 = w;
+                    break;
+                }
+            }
+            
+            for (IndexedWord w : graph.getAllNodesByWordPattern(wOcc2.getWord().getLemma())) {
+                if (w.endPosition() == wOcc2EndOffset) {
+                    word2 = w;
+                    break;
+                }
+            }
+            
+            
             
             List<IndexedWord> word1ToRoot = graph.getPathToRoot(word1);
             List<IndexedWord> word2ToRoot = graph.getPathToRoot(word2);
+            
+            word1ToRoot.add(0, word1);
+            word2ToRoot.add(0, word2);
             
             List<IndexedWord> word1ToCommon = new ArrayList<IndexedWord>();
             List<IndexedWord> word2ToCommon = new ArrayList<IndexedWord>();
@@ -245,18 +272,23 @@ public final class LanguageUtils {
                     }
                 }
             
+            
+            System.out.println("\n" + graph.toList() + "\n");
+            
             System.out.println("Word 1 to common: ");
             IndexedWord previous = word1;
-            for (IndexedWord word : word1ToCommon) {
-                SemanticGraphEdge edge = graph.getEdge(previous, word);
-                System.out.println(previous + " --[" + edge.getRelation().toString() + "]--> " + word);
+            for (int i = 1; i < word1ToCommon.size(); i++) {
+                IndexedWord word = word1ToCommon.get(i);
+                SemanticGraphEdge edge = graph.getEdge(word, previous);
+                System.out.println(word + " --[" + edge.getRelation().toString() + "]--> " + previous);
             }
             
             System.out.println("Word 2 to common: ");
             previous = word2;
-            for (IndexedWord word : word2ToCommon) {
-                SemanticGraphEdge edge = graph.getEdge(previous, word);
-                System.out.println(previous + " --[" + edge.getRelation().toString() + "]--> " + word);
+            for (int i = 1; i < word2ToCommon.size(); i++) {
+                IndexedWord word = word2ToCommon.get(i);
+                SemanticGraphEdge edge = graph.getEdge(word, previous);
+                System.out.println(word + " --[" + edge.getRelation().toString() + "]--> " + previous);
             }
             
         }
