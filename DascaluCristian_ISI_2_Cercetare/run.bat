@@ -1,0 +1,1 @@
+java -Xmx1500m -cp ".;lib/;TextAnalyzer.jar" textanalyzer.Application

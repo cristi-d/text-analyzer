@@ -1,0 +1,124 @@
+[Utterance] #23 #Narrator: 1
+This conversation, as was learned afterwards, was about Jesus Christ.
+
+@4025: God
+[Utterance] #24 #Narrator: 6
+The thing was that the editor had commissioned from the poet a long anti-religious poem for the next issue of his journal. Ivan Nikolaevich had written this poem, and in a very short time, but unfortunately the editor was not at all satisfied with it. Homeless had portrayed the main character of his poem - that is, Jesus - in very dark colours, but nevertheless the whole poem, in the editor's opinion, had to be written over again. And so the editor was now giving the poet something of a lecture on Jesus, with the aim of underscoring the poet's essential error.
+
+@4356: God
+@4542: God
+[Utterance] #25 #Narrator: 3
+It is hard to say what precisely had let Ivan Nikolaevich down - the descriptive powers of his talent or a total unfamiliarity with the question he was writing about - but his Jesus came out, well, completely alive, the once-existing Jesus, though, true, a Jesus furnished with all negative features.
+
+@4782: God
+@4840: God
+@4863: God
+[Utterance] #26 #Narrator: 3
+Now, Berlioz wanted to prove to the poet that the main thing was not how Jesus was, good or bad, but that this same Jesus, as a person, simply never existed in the world, and all the stories about him were mere fiction, the most ordinary mythology.
+
+@4980: God
+@5023: God
+[Utterance] #27 #Narrator: 6
+It must be noted that the editor was a well-read man and in his conversation very skillfully pointed to ancient historians - for instance, the famous Philo of Alexandria and the brilliantly educated Flavius Josephus  - who never said a word about the existence of Jesus. Displaying a solid erudition, Mikhail Alexandrovich also informed the poet, among other things, that the passage in the fifteenth book of Tacitus's famous Annals, the forty-fourth chapter, where mention is made of the execution of Jesus, was nothing but a later spurious interpolation.
+
+@5420: God
+@5658: God
+[Utterance] #29 #Berlioz: 3
+"There's not a single Eastern religion," Berlioz was saying, "in which, as a rule, an immaculate virgin did not give birth to a god. And in just the same way, without inventing anything new, the Christians created their Jesus, who in fact never lived. It's on this that the main emphasis should be placed..."
+
+@6072: God
+@6164: God
+[Utterance] #30 #Narrator: 8
+Berlioz's high tenor rang out in the deserted walk, and as Mikhail Alexandrovich went deeper into the maze, which only a highly educated man can go into without risking a broken neck, the poet learned more and more interesting and useful things about the Egyptian Osiris, a benevolent god and the son of Heaven and Earth, and about the Phoenician god Tammoz, and about Marduk, and even about a lesser known, terrible god, Vitzliputzli, once greatly venerated by the Aztecs in Mexico. And just at the moment when Mikhail Alexandrovich was telling the poet how the Aztecs used to fashion figurines of Vitzli-putzli out of dough - the first man appeared in the walk.
+
+@6538: God
+@6600: God
+@6670: God
+[Utterance] #37 #Berlioz: 7
+"For instance, Ivan," Berlioz was saying, "you portrayed the birth of Jesus, the son of God, very well and satirically, but the gist of it is that a whole series of sons of God were born before Jesus, like, say, the Phoenician Adonis, the Phrygian Atris, the Persian Mithras. And, to put it briefly, not one of them was born or ever existed, Jesus included, and what's necessary is that, instead of portraying his birth or, suppose, the coming of the Magi, you portray the absurd rumours of their coming. Otherwise it follows from your story that he really was born!..."
+
+@8932: God
+@8950: God
+@9035: God
+@9056: God
+@9204: God
+[Utterance] #45 #Woland: 1
+"Unless I heard wrong, you were pleased to say that Jesus never existed?" the foreigner asked, turning his green left eye to Berlioz.
+
+@10593: God
+[Utterance] #52 #Woland: 1
+"Forgive my importunity, but, as I understand, along with everything else, you also do not believe in God?" he made frightened eyes and added:
+
+@11310: Belief
+@11321: God
+[Utterance] #54 #Berlioz: 1
+"No, we don't believe in God," Berlioz replied, smiling slightly at the foreign tourist's fright, but we can speak of it quite freely."
+
+@11407: Belief
+@11418: God
+[Utterance] #56 #Woland: 1
+"You are - atheists?!"
+
+@11627: Atheism
+[Utterance] #57 #Berlioz: 1
+"Yes, we're atheists," Berlioz smilingly replied, and Homeless thought, getting angry: "Latched on to us, the foreign goose!"
+
+@11651: Atheism
+[Utterance] #59 #Berlioz: 2
+"In our country atheism does not surprise anyone," Berlioz said with diplomatic politeness. "The majority of our population consciously and long ago ceased believing in the fairytales about God."
+
+@11903: Atheism
+@12043: Belief
+@12077: God
+[Utterance] #64 #Narrator: 2
+The important information apparendy had indeed produced a strong impression on the traveler, because he passed his frightened glance over the buildings, as if afraid of seeing an atheist in every window.
+
+@12648: Atheism
+[Utterance] #67 #Woland: 2
+"But, allow me to ask you," the foreign visitor spoke after some anxious reflection, "what, then, about the proofs of God's existence, of which, as is known, there are exactly five?"
+
+@12936: Atheism
+@12946: God
+[Utterance] #68 #Berlioz: 2
+"Alas!" Berlioz said with regret. "Not one of these proofs is worth anything, and mankind shelved them long ago. You must agree that in the realm of reason there can be no proof of God's existence."
+
+@13063: Atheism
+@13183: Atheism
+@13192: God
+[Utterance] #69 #Woland: 2
+"Bravo!" cried the foreigner. "Bravo! You have perfectly repeated restless old Immanuel's thought in this regard. But here's the hitch: he roundly demolished all five proofs, and then, as if mocking himself, constructed a sixth of his own."
+
+@13377: Atheism
+[Utterance] #70 #Berlioz: 4
+"Kant's proof," the learned editor objected with a subtle smile, "is equally unconvincing. Not for nothing did Schiller  say that the Kantian reasoning on this question can satisfy only slaves and Strauss simply laughed at this proof." Berlioz spoke, thinking all the while: "But, anyhow, who is he? And why does he speak Russian so well?"
+
+@13459: Atheism
+@13679: Atheism
+[Utterance] #71 #Ivan: 1
+"They ought to take this Kant and give him a three-year stretch in Solovki for such proofs!" Ivan Nikolaevich plumped quite unexpectedly.
+
+@13875: Atheism
+[Utterance] #79 #Woland: 1
+"But here is a question that is troubling me: if there is no God, then, one may ask, who governs human life and, in general, the whole order of things on earth?"
+
+@14962: God
+[Utterance] #121 #Woland: 4
+"Gracious, Ivan Nikolaevich, who doesn't know you?" Here the foreigner took out of his pocket the previous day's issue of the Literary Gazette, and Ivan Nikolaevich saw his own picture on the very first page and under it his very own verses. But the proof of fame and popularity, which yesterday had delighted the poet, this time did not delight him a bit.
+
+@21665: Atheism
+[Utterance] #126 #Ivan: 1
+"Believe me," the poet rasped into his ear, "he's pretending to be a fool in order to find out something or other. Just hear how he speaks Russian."
+
+@22292: Belief
+[Utterance] #148 #Woland: 1
+"Bear in mind that Jesus did exist."
+
+@24832: God
+[Utterance] #151 #Berlioz: 1
+"But there's need for some proof..." Berlioz began.
+
+@25137: Atheism
+[Utterance] #152 #Woland: 3
+"There's no need for any proofs," replied the professor, and he began to speak softly, while his accent for some reason disappeared: "It's all very simple: In a white cloak with blood-red lining, with the shuffling gait of a cavalryman, early in the morning of the fourteenth day of the spring month of Nissan..."
+
+@25187: Atheism

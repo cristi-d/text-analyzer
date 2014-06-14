@@ -49,8 +49,11 @@ import textanalyzer.model.doc.Personage;
 import textanalyzer.model.doc.Voice;
 import textanalyzer.model.lang.Word;
 import textanalyzer.model.lang.WordOccurance;
+import textanalyzer.model.music.MusicalStructure;
 import textanalyzer.nlp.LanguageUtils;
 import textanalyzer.nlp.TextAnalyzer;
+import textanalyzer.sonification.MusicalStructureAnalyzer;
+import textanalyzer.sonification.Sonificator;
 
 /**
  *
@@ -842,7 +845,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
         personagesPanelLayout.setVerticalGroup(
             personagesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGap(0, 680, Short.MAX_VALUE)
         );
 
         voicesPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -856,7 +859,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
         voicesPanelLayout.setVerticalGroup(
             voicesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
+            .addGap(0, 33, Short.MAX_VALUE)
         );
 
         saveChartButton.setText("Save");
@@ -886,15 +889,15 @@ public class MainWindow extends javax.swing.JFrame {
             visualsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(visualsPanelLayout.createSequentialGroup()
                 .addGroup(visualsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(voicesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(voicesPanel, 37, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, visualsPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(saveChartButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(visualsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(visualsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE)
-                    .addComponent(personagesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE))
-                .addGap(0, 80, Short.MAX_VALUE))
+                    .addComponent(visualsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
+                    .addComponent(personagesPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Visual", visualsPanel);
@@ -1149,7 +1152,12 @@ public class MainWindow extends javax.swing.JFrame {
                     jTabbedPane1.setSelectedIndex(1);
                     jTabbedPane1.updateUI();
                     
+                    MusicalStructure musicalStructure = MusicalStructureAnalyzer.computeMusicalStructure(doc);
+                    Sonificator.compose(musicalStructure);
+                    
                     animation.stopAnimation();
+                    
+                    
                 } catch (Exception ex) {
                  Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                 }

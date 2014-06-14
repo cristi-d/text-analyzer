@@ -5,6 +5,9 @@
 package textanalyzer.model.doc;
 
 import edu.stanford.nlp.pipeline.Annotation;
+import java.util.ArrayList;
+import java.util.List;
+import textanalyzer.model.lang.WordOccurance;
 
 /**
  *
@@ -19,6 +22,7 @@ public class Utterance {
     private Annotation parsedTextAnnotation;
     private Annotation originalTextAnnotation;
     private int utteranceIndex;
+    private List<WordOccurance> voiceOccurances;
     
     public enum UtteranceType {
         NARRATIVE, DIALOGUE;
@@ -32,6 +36,8 @@ public class Utterance {
         this.parsedText = parsedText;
         this.utteranceIndex = utteranceIndex;
         this.beginOffset = beginOffset;
+        
+        voiceOccurances = new ArrayList<WordOccurance>();
     }
     
     public int getUtteranceIndex() {
@@ -88,5 +94,13 @@ public class Utterance {
         } else {
             return emmiter.getName();
         }
+    }
+    
+    public void addVoiceOccurance(WordOccurance wOcc) {
+        voiceOccurances.add(wOcc);
+    }
+    
+    public List<WordOccurance> getVoiceOccurances() {
+        return voiceOccurances;
     }
 }

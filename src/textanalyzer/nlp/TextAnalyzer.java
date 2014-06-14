@@ -4,7 +4,6 @@
  */
 package textanalyzer.nlp;
 
-import textanalyzer.model.lang.PolyphonicRelationship;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -24,9 +23,11 @@ import textanalyzer.model.doc.Document;
 import textanalyzer.model.doc.Personage;
 import textanalyzer.model.doc.Utterance;
 import textanalyzer.model.doc.Voice;
+import textanalyzer.model.lang.PolyphonicRelationship;
 import textanalyzer.model.lang.Word;
 import textanalyzer.model.lang.WordId;
 import textanalyzer.model.lang.WordOccurance;
+import textanalyzer.sonification.MusicalStructureAnalyzer;
 
 /**
  *
@@ -225,9 +226,11 @@ public final class TextAnalyzer {
                                             utterance.getBeginOffset() + token.beginPosition(), 
                                             utterance.getBeginOffset() + token.endPosition(), 
                                             utterance, sentenceIndex, tokenIndex);
-
                                     voice.addOccurance(occurance);
                                     occurances.add(occurance);
+                                    
+                                    //Add voice occurance to the utterance
+                                    utterance.addVoiceOccurance(occurance);
                                     break;
                                   }
                                 }
@@ -256,6 +259,7 @@ public final class TextAnalyzer {
         
         doc.setVoiceOccurances(occurances);
     }
+    
     
     public static void detectVoiceInteranimation(Document doc) throws Exception {
         List<WordOccurance> occurances = doc.getVoiceOccurances();
@@ -306,5 +310,7 @@ public final class TextAnalyzer {
             }   
         }
         writer.close();
+        
+        MusicalStructureAnalyzer.computeMusicalStructure(doc);
     }
 }

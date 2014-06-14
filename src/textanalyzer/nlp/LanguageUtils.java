@@ -275,6 +275,8 @@ public final class LanguageUtils {
             
             System.out.println("\n" + graph.toList() + "\n");
             
+            
+            
             System.out.println("Word 1 to common: ");
             IndexedWord previous = word1;
             for (int i = 1; i < word1ToCommon.size(); i++) {
